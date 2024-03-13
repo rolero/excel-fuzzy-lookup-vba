@@ -7,20 +7,15 @@ TableArray must specify the top left cell of the range to be searched
 The function stops scanning the table when an empty cell in column 1       
 is found. 
 
-For each entry in column 1 of the table, FuzzyPercent is called to match   
-LookupValue with the Table entry.                                          
-'Rank' is an optional parameter which may take any value > 0 
-        (default 1) and causes the function to return the 'nth' best        
-         match (where 'n' is defined by 'Rank' parameter)                   
-If the 'Rank' match percentage< NFPercent (Default 5%), #N/A is returned. 
-IndexNum is the column number of the entry in TableArray required to be    
-returned, as follows:                                                      
-If IndexNum > 0 and the 'Rank' percentage match is >= NFPercent            
-                (Default 5%) the column entry indicated by IndexNum is     
-                returned.                                                  
-if IndexNum = 0 and the 'Rank' percentage match is >= NFPercent            
-                 (Default 5%) the offset row (starting at 1) is returned.   
-                 This value can be used directly in the 'Index' function.   
+For each entry in column 1 of the table, FuzzyPercent is called to match LookupValue with the Table entry.                                          
+
+'Rank' is an optional parameter which may take any value > 0 (default 1) and causes the function to return the 'nth' best match (where 'n' is defined by 'Rank' parameter). If the 'Rank' match percentage< NFPercent (Default 5%), #N/A is returned. 
+
+IndexNum is the column number of the entry in TableArray required to be returned, as follows:                                                      
+
+If IndexNum > 0 and the 'Rank' percentage match is >= NFPercent (Default 5%) the column entry indicated by IndexNum is returned.                                                  
+
+if IndexNum = 0 and the 'Rank' percentage match is >= NFPercent (Default 5%) the offset row (starting at 1) is returned.This value can be used directly in the 'Index' function.   
                                                                             
 Algorithm can take one of the following values:                            
 
